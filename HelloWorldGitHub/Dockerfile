@@ -5,4 +5,4 @@ RUN mvn clean packege -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY  --from=Build/ target/demo-0.0.1-SNAPSHOT.jar HelloWorldGitHub.jar
 EXPOSE 8080
-ENTRYPOINT [ "java","-jar","HelloWorldGitHub.jar" ]
+ENTRYPOINT [ "java","-jar","HelloWorldGitHub.jar"]
