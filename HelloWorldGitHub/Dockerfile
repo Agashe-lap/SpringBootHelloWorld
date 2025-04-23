@@ -3,6 +3,6 @@ COPY . .
 RUN mvn package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY  --from=build /target/demo-0.0.1-SNAPSHOT.jar HelloWorldGitHub.jar
+COPY  --from=build /target/HelloWorldGitHub-0.0.1-SNAPSHOT.jar HelloWorldGitHub.jar
 EXPOSE 8080
 ENTRYPOINT [ "java","-jar","HelloWorldGitHub.jar"]
